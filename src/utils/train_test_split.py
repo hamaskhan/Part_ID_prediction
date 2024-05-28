@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the dataset from the CSV file without header
-df = pd.read_csv('dataset_smote.csv', header=None, names=["organization", "description", "part_id"])
+df = pd.read_csv('data/processed/dataset_smote.csv', header=None, names=["organization", "description", "part_id"])
 
 
 # Group by organization
@@ -28,10 +28,10 @@ train_df = pd.concat(train_data)
 eval_df = pd.concat(eval_data)
 
 # Save to CSV files with headers
-train_df.to_csv('training_data.csv', index=False, header=True)
+train_df.to_csv('data/processed/training_data.csv', index=False, header=True)
 
 # Delete the last row
 eval_df = eval_df.iloc[:-1]
-eval_df.to_csv('evaluation_data.csv', index=False, header=True)
+eval_df.to_csv('data/evaluation/evaluation_data.csv', index=False, header=True)
 
 
