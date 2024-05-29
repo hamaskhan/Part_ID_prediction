@@ -15,4 +15,7 @@ On the unseen holdout/test set, the initial SVM without SMOTE achieved an averag
 
 Additional Experiments: I also experimented with RandomForest and Bagging/Boosting, but their average per-class accuracy was lower compared to the SVM. I attempted further optimization of the SVM parameters using GridSearch, but this was quite time-consuming on my MacBook Air hardware.
 
-The ‘src/predict.py’ has the code to run the prediction and show the time taken on the dataset.csv. The prediction time on individual instances is very fast (~1 second) as the model is light. 
+- run 'src/train.py' to train and save the models.
+- run ‘src/predict.py’ to run the prediction and show the time taken on the dataset.csv.
+
+
