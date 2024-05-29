@@ -35,6 +35,8 @@ class ModelPipeline:
         self.tfidf_vectorizer = TfidfVectorizer(ngram_range=(1, 2))  # unigrams and bigrams
         self.word2vec_model = None
         self.svm_model = SVC(kernel='linear', random_state=42)
+        #self.svm_model = SVC(kernel='linear', random_state=42, class_weight='balanced') # to automatically adjust weights inversely proportional to class frequencies
+  
         
     def preprocess_data(self):
         """
